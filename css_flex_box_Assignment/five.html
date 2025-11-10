@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Plans</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; text-align: center; padding: 40px; animation: fadeIn 1s ease; }
+    .pricing { display: flex; justify-content: center; gap: 20px; }
+    .card {
+      background: #f2f2f2; padding: 40px; border-radius: 8px;
+      transition: transform 0.3s; flex: 1;
+    }
+    .card:hover { transform: translateY(-10px); }
+    .highlight { background: #007bff; color: white; transform: scale(1.05); }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @media (max-width: 750px) { .pricing { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <h2>Choose Your Plan</h2>
+  <div class="pricing">
+    <div class="card">Basic<br>$10</div>
+    <div class="card highlight">Pro<br>$20</div>
+    <div class="card">Premium<br>$30</div>
+  </div>
+</body>
+</html>
