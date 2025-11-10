@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Team</title>
+  <style>
+    .team {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+    .lead {
+      background-color: #fce4ec;
+      border: 2px solid #f06292;
+    }
+    @media (max-width: 600px) {
+      .team {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="team">
+    <div class="card lead">
+      <h3>Priya Sharma</h3>
+      <p>Team Lead</p>
+      <p>Manages the entire project workflow and quality assurance.</p>
+    </div>
+    <div class="card">
+      <h3>Rohit Verma</h3>
+      <p>Frontend Developer</p>
+      <p>Builds responsive user interfaces.</p>
+    </div>
+    <div class="card">
+      <h3>Anjali Mehta</h3>
+      <p>Backend Developer</p>
+      <p>Develops secure and scalable backend systems.</p>
+    </div>
+  </section>
+</body>
+</html>
