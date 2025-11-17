@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn{
+      width: 35vw;
+      justify-self: unset;
+      margin: 2vw;
+      display: grid;
+    
+      grid-template-columns: repeat(4,1fr);
+    }
+    button{
+        padding: 4px 14px;
+        cursor: pointer;
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn">
+  <button onclick="calculator+='1'; console.log(calculator)">1</button>
+  <button onclick="calculator+='2'; console.log(calculator)">2</button>
+  <button onclick="calculator+='3'; console.log(calculator)">3<button>
+  <button onclick="calculator+='4'; console.log(calculator)">4</button>
+  <button onclick="calculator+='5'; console.log(calculator)">5</button>
+  <button onclick="calculator+='6'; console.log(calculator)">6</button>
+  <button onclick="calculator+='7'; console.log(calculator)">7</button>
+  <button onclick="calculator+='8'; console.log(calculator)">8</button>
+  <button onclick="calculator+='9'; console.log(calculator)">9</button>
+  <button onclick="calculator+='0'; console.log(calculator)">0</button>
+  <button onclick="calculator='0'; console.log(calculator)">clear<button>
+  <button onclick="calculator+='+'; console.log(calculator)">+</button>
+  <button onclick="calculator+='-'; console.log(calculator)">-</button>
+  </div>
+
+  <script>
+    let calculator= "0";
+console.log(calculator)
+  </script>
+  
+</body>
+</html>

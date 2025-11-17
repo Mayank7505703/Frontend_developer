@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <button onclick="Holder()">+4</button>
+  <button onclick="Holder2()">+5</button>
+  <button onclick="remove()">Remove from Cart</button>
+
+  <button onclick="holder3()">-2</button>
+  <button onclick="holder4()">-3</button>
+  
+  <script>
+    let name = "Mayank";
+    let message = `My name is ${name}`;
+    console.log(message);
+
+    let coffee = 5;
+    let bagels = 3 * 2;
+    let soup = 9;
+    let cost = coffee + bagels + soup;
+    console.log(`Cost of food: $${cost}`);
+
+    let tax = cost * 0.1;
+    let afterTax = cost + tax;
+
+    console.log(`Tax (10%): $${tax}`);
+    console.log(`Total cost: $${afterTax}`);
+
+    let cardQuantity = 0;
+
+    function Holder() {
+      cardQuantity += 4;
+      console.log(`Cart Quantity: ${cardQuantity}`);
+    }
+
+    function Holder2() {
+      cardQuantity += 5;
+      console.log(`Cart Quantity: ${cardQuantity}`);
+    }
+    function holder3(){
+      cardQuantity-=2
+      console.log(cardQuantity)
+    }
+    function holder4(){
+      cardQuantity-=3
+      console.log(cardQuantity)
+    }
+
+    function remove() {
+      cardQuantity = 0;
+      console.log(`Cart Quantity: ${cardQuantity}`);
+    }
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration</title>
+</head>
+<body>
+
+    <h1>Course Registration Form</h1>
+    <form>
+        <fieldset>
+            <legend>Student Information</legend>
+            <p>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="student_name">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="student_email">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Course Selection</legend>
+            <p>
+                <label for="course">Select a Course:</label>
+                <select id="course" name="course_choice">
+                    <option value="cs101">Introduction to Programming (CS101)</option>
+                    <option value="wd102">Web Development (WD102)</option>
+                    <option value="ds201">Data Structures (DS201)</option>
+                </select>
+            </p>
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <h2>Available Course Schedules</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CS101</td>
+                <td>Mon/Wed</td>
+                <td>10:00 AM - 11:30 AM</td>
+                <td>Prof. Anand</td>
+            </tr>
+            <tr>
+                <td>WD102</td>
+                <td>Tue/Thu</td>
+                <td>1:00 PM - 2:30 PM</td>
+                <td>Prof. Priya</td>
+            </tr>
+            <tr>
+                <td>DS201</td>
+                <td>Mon/Wed/Fri</td>
+                <td>3:00 PM - 4:00 PM</td>
+                <td>Prof. Singh</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

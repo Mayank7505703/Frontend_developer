@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+     background: #9c6b6b;
+background: linear-gradient(90deg, rgba(156, 107, 107, 1) 0%, rgba(170, 44, 199, 0.39) 100%, rgba(83, 13, 163, 1) 89%);
+      margin: 0;
+      padding: 0;
+    }
+    .elements{
+      margin-top: 5vh;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      
+    }
+    .paper{
+ border:3px solid black;
+   border-radius: 50%;
+    }
+    .rock{
+ border:3px solid black;
+   border-radius: 50%;
+    }
+    .sci{
+ border:3px solid black;
+   border-radius: 50%;
+    }
+     .paper button{
+     
+      font-size: 5em;
+     
+       padding: 15px;
+       cursor: pointer;
+    }
+     .rock button{
+      border: 3px solid black;  
+      font-size: 5em; 
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+    }
+     .sci button{
+      border: 3px solid black;  
+      font-size: 5em; 
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+    }
+    .result{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">
+    Rock, Paper, Scissor Game
+  </h1>
+
+  <div class="elements" style="display: flex; gap: 20px;">
+  <div class="paper">
+    <button id="btn-1"  style="border: 0; background: transparent;">🖐️</button>
+  </div>
+  <div class="rock">
+    <button id="btn-2" style="border: 0; background: transparent;">✊</button>
+  </div>
+  <div class="sci">
+    <button id="btn-3" style="border: 0; background: transparent;">✌️</button>
+  </div>
+</div>
+
+  <div class="result">
+    <h1>Result: <span id="res"></span></h1>
+  </div>
+  
+  <div class="shown" style="display: flex; justify-content: center;">
+     <h3 >
+      You: 
+      <span id="my"></span> 
+      Computer: 
+      <span id="computer"></span>
+      
+    </h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
