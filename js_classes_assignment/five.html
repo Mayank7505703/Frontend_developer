@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q5 Movie Ticket</title>
+<style>.error{color:red}</style>
+</head>
+<body>
+
+<h2>Movie Ticket Booking</h2>
+
+<form id="bookForm">
+    <input id="name" placeholder="Name"><span class="error" id="e1"></span><br>
+    <input id="email" placeholder="Email"><span class="error" id="e2"></span><br>
+    <input id="seats" placeholder="Seats (1-10)"><span class="error" id="e3"></span><br>
+    <button>Book</button>
+</form>
+
+<div id="ticket"></div>
+
+<script>
+const form = document.getElementById("bookForm");
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    
+    const n = name.value, m = email.value, s = seats.value;
+    let valid = true;
+
+    if (!/^[A-Za-z ]+$/.test(n)) { e1.textContent="Invalid name"; valid=false; } else e1.textContent="";
+    if (!/^[\w.-]+@[\w.-]+\.\w+$/.test(m)) { e2.textContent="Invalid email"; valid=false; } else e2.textContent="";
+    if (!/^(10|[1-9])$/.test(s)) { e3.textContent="1-10 only"; valid=false; } else e3.textContent="";
+
+    if (valid) {
+        const booking = { name:n, email:m, seats:s };
+        document.getElementById("ticket").innerHTML = `
+            <h3>Booking Confirmed</h3>
+            <p>${JSON.stringify(booking)}</p>
+        `;
+    }
+});
+</script>
+
+</body>
+</html>

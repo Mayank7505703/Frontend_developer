@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q2 Student Validator</title>
+<style>
+.error { color: red; font-size: 14px; }
+input { margin-bottom: 8px; display: block; padding: 6px; }
+.valid { border: 2px solid green; }
+.invalid { border: 2px solid red; }
+</style>
+</head>
+<body>
+
+<h2>Student Registration</h2>
+
+<form id="studentForm">
+    <input type="text" id="name" placeholder="Name">
+    <span id="nameErr" class="error"></span>
+
+    <input type="text" id="email" placeholder="Email">
+    <span id="emailErr" class="error"></span>
+
+    <input type="text" id="phone" placeholder="Phone (10 digits)">
+    <span id="phoneErr" class="error"></span>
+
+    <input type="password" id="pass" placeholder="Password">
+    <span id="passErr" class="error"></span>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+const form = document.getElementById("studentForm");
+
+const validate = (input, regex, errorSpan, msg) => {
+    if (regex.test(input.value)) {
+        input.className = "valid";
+        errorSpan.textContent = "";
+        return true;
+    } else {
+        input.className = "invalid";
+        errorSpan.textContent = msg;
+        return false;
+    }
+};
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const validName = validate(name, /^[A-Za-z ]+$/, nameErr, "Only alphabets");
+    const validEmail = validate(email, /^[\w.-]+@[\w.-]+\.\w+$/, emailErr, "Invalid email");
+    const validPhone = validate(phone, /^\d{10}$/, phoneErr, "Must be 10 digits");
+    const validPass = validate(pass, /^(?=.*[A-Z])(?=.*\d)(?=.*\W).+$/, passErr, "Must contain uppercase, number, special char");
+
+    if (validName && validEmail && validPhone && validPass) {
+        alert("Form Submitted!");
+    }
+});
+</script>
+
+</body>
+</html>

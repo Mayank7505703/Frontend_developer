@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q8 User Update</title></head>
+<body>
+
+<form id="userForm">
+    <input id="name" placeholder="Name"><br>
+    <input id="email" placeholder="Email"><br>
+    <input id="age" placeholder="Age"><br>
+    <button>Update</button>
+</form>
+
+<pre id="output"></pre>
+
+<script>
+let user = { name:"Akash", email:"akash@mail.com", age:21 };
+
+name.value = user.name;
+email.value = user.email;
+age.value = user.age;
+
+document.getElementById("userForm").addEventListener("submit", e => {
+    e.preventDefault();
+
+    user = {
+        name: name.value,
+        email: email.value,
+        age: age.value
+    };
+
+    output.textContent = JSON.stringify(user, null, 2);
+});
+</script>
+
+</body>
+</html>

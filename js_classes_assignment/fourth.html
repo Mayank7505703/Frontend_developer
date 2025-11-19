@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q4 Form Builder</title></head>
+<body>
+
+<div id="formContainer"></div>
+<pre id="output"></pre>
+
+<script>
+class FormBuilder {
+    constructor(fields) {
+        this.fields = fields;
+    }
+
+    renderForm() {
+        let html = "<form id='dynForm'>";
+        this.fields.forEach(f => {
+            html += `<label>${f.label}</label>
+                     <input type="${f.type}" id="${f.label.toLowerCase()}"><br>`;
+        });
+        html += `<button type="submit">Submit</button></form>`;
+        document.getElementById("formContainer").innerHTML = html;
+    }
+
+    getFormData() {
+        const data = {};
+        this.fields.forEach(f => {
+            let key = f.label.toLowerCase();
+            data[key] = document.getElementById(key).value;
+        });
+        return data;
+    }
+}
+
+const fb = new FormBuilder([
+    {type: "text", label: "Username"},
+    {type: "email", label: "Email"},
+]);
+
+fb.renderForm();
+
+document.getElementById("formContainer").addEventListener("submit", e => {
+    e.preventDefault();
+    const data = fb.getFormData();
+    document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+});
+</script>
+
+</body>
+</html>
