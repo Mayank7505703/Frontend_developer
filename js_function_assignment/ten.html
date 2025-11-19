@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q10 Resume</title></head>
+<body>
+
+<form id="resumeForm">
+    <input id="name" placeholder="Name"><br>
+    <input id="email" placeholder="Email"><br>
+    <input id="skills" placeholder="Skills"><br>
+    <input id="git" placeholder="GitHub URL"><br>
+    <input id="linkedin" placeholder="LinkedIn URL"><br>
+    <button>Generate</button>
+</form>
+
+<pre id="output"></pre>
+
+<script>
+document.getElementById("resumeForm").addEventListener("submit", e => {
+    e.preventDefault();
+
+    if (!/^[\w.-]+@[\w.-]+\.\w+$/.test(email.value))
+        return alert("Invalid Email");
+
+    if (!/^https:\/\//.test(git.value) || !/^https:\/\//.test(linkedin.value))
+        return alert("URLs must start with https://");
+
+    const resume = {
+        name: name.value,
+        email: email.value,
+        skills: skills.value.split(","),
+        github: git.value,
+        linkedin: linkedin.value
+    };
+
+    output.textContent = JSON.stringify(resume, null, 2);
+});
+</script>
+
+</body>
+</html>
