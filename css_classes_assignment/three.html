@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Cards</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .card-container { display: flex; gap: 20px; padding: 20px; justify-content: center; }
+    .card {
+      flex: 1; padding: 40px; background: #ddd; text-align: center;
+      transition: background 0.3s;
+    }
+    .card:hover { background: #bbb; }
+    @media (max-width: 900px) { .card { flex: 45%; } }
+    @media (max-width: 600px) { .card { flex: 100%; } .card-container { flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <main class="card-container">
+    <article class="card">Card 1</article>
+    <article class="card">Card 2</article>
+    <article class="card">Card 3</article>
+    <article class="card">Card 4</article>
+  </main>
+</body>
+</html>

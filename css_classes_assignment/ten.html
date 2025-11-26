@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Dashboard</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; animation: fadeIn 1s ease; }
+    .dashboard {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "aside main";
+      grid-template-columns: 200px 1fr;
+      min-height: 100vh;
+    }
+    header { grid-area: header; background: #333; color: white; padding: 15px; }
+    aside { grid-area: aside; background: #f0f0f0; padding: 20px; }
+    main {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: #fff; padding: 30px; text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover { transform: scale(1.05); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @media (max-width: 750px) {
+      .dashboard { grid-template-areas: "header" "aside" "main"; grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <header>Dashboard Header</header>
+    <aside>Sidebar</aside>
+    <main>
+      <div class="card">Filters</div>
+      <div class="card">Typography</div>
+      <div class="card">Media Queries</div>
+      <div class="card">Cheat Sheet Links</div>
+    </main>
+  </div>
+</body>
+</html>

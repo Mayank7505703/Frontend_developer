@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Typography</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    .text-block { text-align: center; padding: 40px; margin: 20px; }
+    h1 { font-size: clamp(1.5rem, 4vw, 3rem); }
+    p { font-size: clamp(1rem, 2vw, 1.5rem); }
+    @media (max-width: 700px) { .text-block { line-height: 1.6; padding: 20px; } }
+  </style>
+</head>
+<body>
+  <section class="text-block">
+    <h1>Responsive Typography</h1>
+    <p>Font sizes scale automatically using clamp().</p>
+  </section>
+</body>
+</html>

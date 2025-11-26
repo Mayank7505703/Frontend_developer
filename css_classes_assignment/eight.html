@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter Comparison</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; text-align: center; padding: 20px; }
+    .comparison { display: flex; gap: 20px; justify-content: center; align-items: center; }
+    img { width: 100%; max-width: 400px; transition: filter 0.3s; }
+    figure:nth-child(2) img { filter: brightness(50%); }
+    figure:nth-child(2):hover img { filter: none; }
+    @media (max-width: 700px) { .comparison { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <main class="comparison">
+    <figure><img src="https://via.placeholder.com/400"><figcaption>Before</figcaption></figure>
+    <figure><img src="https://via.placeholder.com/400"><figcaption>After (Brightness)</figcaption></figure>
+  </main>
+</body>
+</html>

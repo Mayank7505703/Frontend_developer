@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Flexbox Layout</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    .header {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #333; color: #fff; padding: 15px 30px;
+    }
+    .nav a { color: white; text-decoration: none; margin-left: 20px; }
+    .features { display: flex; gap: 20px; padding: 20px; }
+    .box {
+      flex: 1; background: #f2f2f2; padding: 40px; text-align: center;
+      transition: transform 0.3s;
+    }
+    .box:hover { transform: scale(1.05); background: #e0e0e0; }
+    .footer { text-align: center; background: #222; color: #fff; padding: 10px; }
+    @media (max-width: 750px) { .features { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">MySite</div>
+    <nav class="nav"><a href="#">Home</a><a href="#">About</a><a href="#">Contact</a></nav>
+  </header>
+  <main class="features">
+    <section class="box">Feature 1</section>
+    <section class="box">Feature 2</section>
+    <section class="box">Feature 3</section>
+  </main>
+  <footer class="footer"><p>&copy; 2025 MySite</p></footer>
+</body>
+</html>
